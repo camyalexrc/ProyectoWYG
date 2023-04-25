@@ -12,7 +12,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class Login {
-    
+    //Método de validación de usuario
     public void validarUsuario(JTextField correo, JPasswordField contrasena){
         try {
             ResultSet rs = null;
@@ -30,7 +30,7 @@ public class Login {
             //ejecutamos la consulta
             rs = ps.executeQuery();
             
-            //validamos
+            //Validamos
             if(rs.next()){
                 indexSesion objetoSesion = new indexSesion();
                 objetoSesion.setVisible(true);

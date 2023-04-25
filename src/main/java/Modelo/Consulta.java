@@ -14,12 +14,12 @@ public class Consulta {
     
     //Método de registro de usuario
     public boolean crearUsuario (Usuario u){
-        
+        System.out.println(u);
         PreparedStatement ps = null;
         Modelo.Conexion  con= new Modelo.Conexion();
-        String sql = "insert into persona (rut, nombre, edad, estatura, peso, telefono, correo, contrasena) values (?,?,?,?,?,?,?,?)";
+        String sql = "insert * into persona (rut, nombre, edad, estatura, peso, telefono, correo, contrasena) values (?,?,?,?,?,?,?,?)";
         
-        try {
+        /*try {
             ps = con.establecerConexion().prepareStatement(sql);
             ps.setInt(1,u.getRut());
             ps.setString(2, u.getNombre());
@@ -34,7 +34,9 @@ public class Consulta {
             System.out.println(e);
             return false;
             
-        }
+        }*/
+        return (true);
+        
     }
     //Metodo modificar datos de usuario
     public boolean modificarUsuario (Usuario u){
